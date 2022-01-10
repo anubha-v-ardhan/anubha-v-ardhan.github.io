@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Anubhav Vardhan</title>
+    <link>https://anubha-v-ardhan.github.io/blog/</link>
+    <description>Recent content in Blog on Anubhav Vardhan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Jan 2022 16:40:26 +0530</lastBuildDate><atom:link href="https://anubha-v-ardhan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Introduction for Beginners</title>
+      <link>https://anubha-v-ardhan.github.io/blog/docker-introduction-for-beginners/</link>
+      <pubDate>Mon, 10 Jan 2022 16:41:55 +0530</pubDate>
+      
+      <guid>https://anubha-v-ardhan.github.io/blog/docker-introduction-for-beginners/</guid>
+      <description>What is Docker?</description>
+    </item>
+    
+  </channel>
+</rss>
