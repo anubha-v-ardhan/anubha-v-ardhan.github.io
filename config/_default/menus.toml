@@ -21,9 +21,10 @@
   weight = 20
 
 [[main]]
-  name = "Tags"
-  pageRef = "tags"
+  name = "Contribute"
+  pageRef = "contribute"
   weight = 30
+  url = "https://github.com/anubha-v-ardhan/anubha-v-ardhan.github.io"
 
 
 # -- Footer Menu --

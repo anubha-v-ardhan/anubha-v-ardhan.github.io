@@ -14,8 +14,8 @@ colorScheme = "congo"
 # robots = ""
 
 [homepage]
-  layout = "profile" # valid options: page, profile, custom
-  showRecent = true
+  layout = "page" # valid options: page, profile, custom
+  showRecent = false
 
 [article]
   showDate = true
