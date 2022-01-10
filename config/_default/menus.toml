@@ -12,11 +12,11 @@
 
 [[main]]
   name = "Blog"
-  pageRef = "posts"
   weight = 10
+  url = "/blog"
 
 [[main]]
-  name = "Categories"
+  name = "Projects"
   pageRef = "categories"
   weight = 20
 
