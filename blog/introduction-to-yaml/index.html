@@ -109,7 +109,7 @@
     "dateModified": "2022-01-12T15:51:50\u002b05:30",
     "url" : "https:\/\/anubha-v-ardhan.github.io\/blog\/introduction-to-yaml\/",
     
-    "wordCount": "840"
+    "wordCount": "825"
   }
   </script>
 
@@ -418,18 +418,18 @@
 <li>We can separate different YAML configs using <code>---</code></li>
 <li>This comes very handy in <a href="https://kubernetes.io/">Kubernetes</a> where we have multiple components in one service and we want to group them in single YAML file.</li>
 </ul>
-<pre tabindex="0"><code>apiVersion: v1
-kind: configMap
-metadata
-  name: config-file
-  
----
-
-apiVersion: v1
-kind: configMap
-metadata
-  name: config-file
-</code></pre><p><strong>Note that we can write Kubernetes configuration files in both YAML and JSON format but YAML is more commonly used as it is cleaner and more readable</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">configMap</span><span class="w">
+</span><span class="w"></span><span class="l">metadata</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">config-file</span><span class="w">
+</span><span class="w">  
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">configMap</span><span class="w">
+</span><span class="w"></span><span class="l">metadata</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">config-file</span><span class="w">
+</span></code></pre></div><p><strong>Note that we can write Kubernetes configuration files in both YAML and JSON format but YAML is more commonly used as it is cleaner and more readable</strong></p>
 <br>
 <h1 id="thank-you-so-much-for-reading-">Thank you so much for reading 💖 <a class="heading-anchor" href="#thank-you-so-much-for-reading-" aria-label="Anchor">#</a></h1>
 <p>Hope you liked this blog on YAML. If you find any mistakes or inaccuracies, please inform me on social or by <a href="https://github.com/anubha-v-ardhan/anubha-v-ardhan.github.io/issues/new">filing an issue</a>.
