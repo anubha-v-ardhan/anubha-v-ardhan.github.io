@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Mon, 10 Jan 2022 16:40:26 +0530</lastBuildDate><atom:link href="https://anubha-v-ardhan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Introduction to YAML</title>
+      <link>https://anubha-v-ardhan.github.io/blog/introduction-to-yaml/</link>
+      <pubDate>Wed, 12 Jan 2022 15:51:50 +0530</pubDate>
+      
+      <guid>https://anubha-v-ardhan.github.io/blog/introduction-to-yaml/</guid>
+      <description>What is YAML?</description>
+    </item>
+    
+    <item>
       <title>Docker Introduction for Beginners</title>
       <link>https://anubha-v-ardhan.github.io/blog/docker-introduction-for-beginners/</link>
       <pubDate>Thu, 05 Aug 2021 16:41:55 +0530</pubDate>
