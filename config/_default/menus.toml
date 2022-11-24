@@ -21,9 +21,14 @@
   weight = 20
 
 [[main]]
+  name = "Certificates"
+  weight = 30
+  url = "/certificate"
+
+[[main]]
   name = "Contribute"
   pageRef = "contribute"
-  weight = 30
+  weight = 40
   url = "https://github.com/anubha-v-ardhan/anubha-v-ardhan.github.io"
 
 
