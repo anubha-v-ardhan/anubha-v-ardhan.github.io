@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certificates on Anubhav Vardhan</title>
+    <link>https://anubha-v-ardhan.github.io/certificate/</link>
+    <description>Recent content in Certificates on Anubhav Vardhan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Jan 2022 16:40:26 +0530</lastBuildDate><atom:link href="https://anubha-v-ardhan.github.io/certificate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Academy Cloud Foundations</title>
+      <link>https://anubha-v-ardhan.github.io/certificate/aws-academy-cloud-foundations/</link>
+      <pubDate>Sat, 12 Nov 2022 16:41:55 +0530</pubDate>
+      
+      <guid>https://anubha-v-ardhan.github.io/certificate/aws-academy-cloud-foundations/</guid>
+      <description>AWS Academy Cloud Foundations is an introductory course intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles.</description>
+    </item>
+    
+  </channel>
+</rss>

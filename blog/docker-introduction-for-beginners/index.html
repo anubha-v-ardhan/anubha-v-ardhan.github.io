@@ -116,7 +116,7 @@
 
   
   
-    <meta name="generator" content="Hugo 0.91.2" />
+    <meta name="generator" content="Hugo 0.105.0">
   
   
   <meta name="author" content="Anubhav Vardhan" />
@@ -185,6 +185,15 @@
               href="/categories/"
               title="Categories"
               >Projects</a
+            >
+          </li>
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/certificate"
+              title=""
+              >Certificates</a
             >
           </li>
         
@@ -385,8 +394,8 @@ anubhav@anubhav:~$
 65549aea7da3ce583ebbcb392df30854964f471434ff3a522a83c845ac65ec68
 anubhav@anubhav:~$ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
-65549aea7da3   mongo     &quot;docker-entrypoint.s…&quot;   2 minutes ago    Up 27 seconds   27017/tcp, 0.0.0.0:6000-&gt;6396/tcp, :::6000-&gt;6396/tcp   pensive_noyce
-c7ecdb8c3558   mongo     &quot;docker-entrypoint.s…&quot;   50 minutes ago   Up 6 seconds    27017/tcp                                              xenodochial_volhard
+65549aea7da3   mongo     &#34;docker-entrypoint.s…&#34;   2 minutes ago    Up 27 seconds   27017/tcp, 0.0.0.0:6000-&gt;6396/tcp, :::6000-&gt;6396/tcp   pensive_noyce
+c7ecdb8c3558   mongo     &#34;docker-entrypoint.s…&#34;   50 minutes ago   Up 6 seconds    27017/tcp                                              xenodochial_volhard
 anubhav@anubhav:~$
 </code></pre><p><strong>Note</strong> the <code>PORTS</code> of our new container <code>0.0.0.0:6000-&gt;6396/tcp, :::6000-&gt;6396/tcp</code> shows that <code>port 6000</code> of host machine is now bounded to <code>port 6396</code> of container environment.</p>
 <h3 id="docker-ps">docker ps <a class="heading-anchor" href="#docker-ps" aria-label="Anchor">#</a></h3>
@@ -395,13 +404,13 @@ anubhav@anubhav:~$
 <p><strong>Note</strong> that we can add <code>-a</code> attribute to <code>docker ps</code> to list all the containers(stopped or running) on our local machine.</p>
 <pre tabindex="0"><code>anubhav@anubhav:~$ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS       NAMES
-c7ecdb8c3558   mongo     &quot;docker-entrypoint.s…&quot;   9 seconds ago   Up 9 seconds   27017/tcp   xenodochial_volhard
+c7ecdb8c3558   mongo     &#34;docker-entrypoint.s…&#34;   9 seconds ago   Up 9 seconds   27017/tcp   xenodochial_volhard
 anubhav@anubhav:~$ docker ps -a
 CONTAINER ID   IMAGE         COMMAND                  CREATED             STATUS                         PORTS       NAMES
-c7ecdb8c3558   mongo         &quot;docker-entrypoint.s…&quot;   8 minutes ago       Up 8 minutes                   27017/tcp   xenodochial_volhard
-7731539fe844   mongo         &quot;docker-entrypoint.s…&quot;   8 minutes ago       Exited (0) 8 minutes ago                   naughty_hodgkin
-ffb68c57ae84   hello-world   &quot;/hello&quot;                 About an hour ago   Exited (0) About an hour ago               nostalgic_buck
-e5eec66d2aae   hello-world   &quot;/hello&quot;                 About an hour ago   Exited (0) About an hour ago               relaxed_bouman
+c7ecdb8c3558   mongo         &#34;docker-entrypoint.s…&#34;   8 minutes ago       Up 8 minutes                   27017/tcp   xenodochial_volhard
+7731539fe844   mongo         &#34;docker-entrypoint.s…&#34;   8 minutes ago       Exited (0) 8 minutes ago                   naughty_hodgkin
+ffb68c57ae84   hello-world   &#34;/hello&#34;                 About an hour ago   Exited (0) About an hour ago               nostalgic_buck
+e5eec66d2aae   hello-world   &#34;/hello&#34;                 About an hour ago   Exited (0) About an hour ago               relaxed_bouman
 anubhav@anubhav:~$ 
 </code></pre><p>As we can see, <code>docker ps</code> listed <code>mongo</code> as it is the only container currently running but <code>docker ps -a</code> listed two <code>mongo</code> and two <code>hello-world</code> containers which are all the containers present on our machine.</p>
 <h3 id="docker-stop">docker stop <a class="heading-anchor" href="#docker-stop" aria-label="Anchor">#</a></h3>
@@ -425,7 +434,7 @@ $ docker start &lt;container name&gt;
 xenodochial_volhard
 anubhav@anubhav:~$ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS         PORTS       NAMES
-c7ecdb8c3558   mongo     &quot;docker-entrypoint.s…&quot;   32 minutes ago   Up 3 seconds   27017/tcp   xenodochial_volhard
+c7ecdb8c3558   mongo     &#34;docker-entrypoint.s…&#34;   32 minutes ago   Up 3 seconds   27017/tcp   xenodochial_volhard
 anubhav@anubhav:~$
 </code></pre><h1 id="debugging-containers">Debugging Containers <a class="heading-anchor" href="#debugging-containers" aria-label="Anchor">#</a></h1>
 <p>Debugging in Docker is mainly done using two commands</p>
@@ -434,16 +443,16 @@ anubhav@anubhav:~$
 </code></pre><p>is used to view the logs of a container.</p>
 <pre tabindex="0"><code>anubhav@anubhav:~$ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS          PORTS                                                  NAMES
-65549aea7da3   mongo     &quot;docker-entrypoint.s…&quot;   15 minutes ago      Up 13 minutes   27017/tcp, 0.0.0.0:6000-&gt;6396/tcp, :::6000-&gt;6396/tcp   pensive_noyce
-c7ecdb8c3558   mongo     &quot;docker-entrypoint.s…&quot;   About an hour ago   Up 13 minutes   27017/tcp                                              xenodochial_volhard
+65549aea7da3   mongo     &#34;docker-entrypoint.s…&#34;   15 minutes ago      Up 13 minutes   27017/tcp, 0.0.0.0:6000-&gt;6396/tcp, :::6000-&gt;6396/tcp   pensive_noyce
+c7ecdb8c3558   mongo     &#34;docker-entrypoint.s…&#34;   About an hour ago   Up 13 minutes   27017/tcp                                              xenodochial_volhard
 anubhav@anubhav:~$ docker logs 65549aea7da3
-{&quot;t&quot;:{&quot;$date&quot;:&quot;2021-08-05T13:35:56.516+00:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:23285,   &quot;ctx&quot;:&quot;thread1&quot;,&quot;msg&quot;:&quot;Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'&quot;}
-{&quot;t&quot;:{&quot;$date&quot;:&quot;2021-08-05T13:35:56.516+00:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:4915701, &quot;ctx&quot;:&quot;thread1&quot;,&quot;msg&quot;:&quot;Initialized wire specification&quot;,&quot;attr&quot;:{&quot;spec&quot;:{&quot;incomingExternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:13},&quot;incomingInternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:13},&quot;outgoing&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:13},&quot;isInternalClient&quot;:true}}}
+{&#34;t&#34;:{&#34;$date&#34;:&#34;2021-08-05T13:35:56.516+00:00&#34;},&#34;s&#34;:&#34;I&#34;,  &#34;c&#34;:&#34;CONTROL&#34;,  &#34;id&#34;:23285,   &#34;ctx&#34;:&#34;thread1&#34;,&#34;msg&#34;:&#34;Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols &#39;none&#39;&#34;}
+{&#34;t&#34;:{&#34;$date&#34;:&#34;2021-08-05T13:35:56.516+00:00&#34;},&#34;s&#34;:&#34;I&#34;,  &#34;c&#34;:&#34;NETWORK&#34;,  &#34;id&#34;:4915701, &#34;ctx&#34;:&#34;thread1&#34;,&#34;msg&#34;:&#34;Initialized wire specification&#34;,&#34;attr&#34;:{&#34;spec&#34;:{&#34;incomingExternalClient&#34;:{&#34;minWireVersion&#34;:0,&#34;maxWireVersion&#34;:13},&#34;incomingInternalClient&#34;:{&#34;minWireVersion&#34;:0,&#34;maxWireVersion&#34;:13},&#34;outgoing&#34;:{&#34;minWireVersion&#34;:0,&#34;maxWireVersion&#34;:13},&#34;isInternalClient&#34;:true}}}
 .
 .
 .
 .
-{&quot;t&quot;:{&quot;$date&quot;:&quot;2021-08-05T13:51:59.592+00:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:22430,   &quot;ctx&quot;:&quot;Checkpointer&quot;,&quot;msg&quot;:&quot;WiredTiger message&quot;,&quot;attr&quot;:{&quot;message&quot;:&quot;[1628171519:592926][1:0x7f5c3d197700], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 17, snapshot max: 17 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0)&quot;}}
+{&#34;t&#34;:{&#34;$date&#34;:&#34;2021-08-05T13:51:59.592+00:00&#34;},&#34;s&#34;:&#34;I&#34;,  &#34;c&#34;:&#34;STORAGE&#34;,  &#34;id&#34;:22430,   &#34;ctx&#34;:&#34;Checkpointer&#34;,&#34;msg&#34;:&#34;WiredTiger message&#34;,&#34;attr&#34;:{&#34;message&#34;:&#34;[1628171519:592926][1:0x7f5c3d197700], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 17, snapshot max: 17 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0)&#34;}}
 anubhav@anubhav:~$ 
 </code></pre><h3 id="docker-exec">docker exec <a class="heading-anchor" href="#docker-exec" aria-label="Anchor">#</a></h3>
 <pre tabindex="0"><code>$ docker exec -it &lt;container ID or name&gt; /bin/bash
@@ -452,8 +461,8 @@ anubhav@anubhav:~$
 <code>/bin/bash</code> is used to access the bash of running container.</p>
 <pre tabindex="0"><code>anubhav@anubhav:~$ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS          PORTS                                                  NAMES
-65549aea7da3   mongo     &quot;docker-entrypoint.s…&quot;   22 minutes ago      Up 20 minutes   27017/tcp, 0.0.0.0:6000-&gt;6396/tcp, :::6000-&gt;6396/tcp   pensive_noyce
-c7ecdb8c3558   mongo     &quot;docker-entrypoint.s…&quot;   About an hour ago   Up 20 minutes   27017/tcp                                              xenodochial_volhard
+65549aea7da3   mongo     &#34;docker-entrypoint.s…&#34;   22 minutes ago      Up 20 minutes   27017/tcp, 0.0.0.0:6000-&gt;6396/tcp, :::6000-&gt;6396/tcp   pensive_noyce
+c7ecdb8c3558   mongo     &#34;docker-entrypoint.s…&#34;   About an hour ago   Up 20 minutes   27017/tcp                                              xenodochial_volhard
 anubhav@anubhav:~$ docker exec -it 65549aea7da3 /bin/bash
 root@65549aea7da3:/# ls
 bin   data  docker-entrypoint-initdb.d  home        lib    lib64   media  opt   root  sbin  sys  usr

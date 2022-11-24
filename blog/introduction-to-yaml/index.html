@@ -109,14 +109,14 @@
     "dateModified": "2022-01-12T15:51:50\u002b05:30",
     "url" : "https:\/\/anubha-v-ardhan.github.io\/blog\/introduction-to-yaml\/",
     
-    "wordCount": "825"
+    "wordCount": "950"
   }
   </script>
 
 
   
   
-    <meta name="generator" content="Hugo 0.91.2" />
+    <meta name="generator" content="Hugo 0.105.0">
   
   
   <meta name="author" content="Anubhav Vardhan" />
@@ -191,6 +191,15 @@
           <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
             <a
               class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="/certificate"
+              title=""
+              >Certificates</a
+            >
+          </li>
+        
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
               href="https://github.com/anubha-v-ardhan/anubha-v-ardhan.github.io"
               title=""
               >Contribute</a
@@ -240,7 +249,7 @@
     
     
       <time datetime="2022-01-12 15:51:50 &#43;0530 IST">12 January 2022</time>
-<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+<span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -262,139 +271,139 @@
 <p>Let us look at the differences between YAML, JSON and XML:</p>
 <h3 id="yaml">YAML <a class="heading-anchor" href="#yaml" aria-label="Anchor">#</a></h3>
 <p>A simple config in YAML would look something like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">microservices</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.0</span><span class="w">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">microservices</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.0</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>Note that there are no special characters to define data structures.</li>
 <li>YAML uses line seperation and space identation for defining the structure of data.</li>
 </ul>
 <h3 id="xml">XML <a class="heading-anchor" href="#xml" aria-label="Anchor">#</a></h3>
 <p>The same configuration in XML would look like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-XML" data-lang="XML"><span class="nt">&lt;microservices&gt;</span>
-  <span class="nt">&lt;microservices&gt;</span>
-    <span class="nt">&lt;app&gt;</span>user-authentication<span class="nt">&lt;/app&gt;</span>
-    <span class="nt">&lt;port&gt;</span>8000<span class="nt">&lt;/port&gt;</span>
-    <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
-  <span class="nt">&lt;/microservices&gt;</span>
-<span class="nt">&lt;/microservices&gt;</span>
-</code></pre></div><p>Note that here we are using tags (<code>&lt;&gt; &lt;/&gt;</code>) to define data structure.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-XML" data-lang="XML"><span class="line"><span class="cl"><span class="nt">&lt;microservices&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;microservices&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;app&gt;</span>user-authentication<span class="nt">&lt;/app&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;port&gt;</span>8000<span class="nt">&lt;/port&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/microservices&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/microservices&gt;</span>
+</span></span></code></pre></div><p>Note that here we are using tags (<code>&lt;&gt; &lt;/&gt;</code>) to define data structure.</p>
 <h3 id="json">JSON <a class="heading-anchor" href="#json" aria-label="Anchor">#</a></h3>
 <p>The same configuration in JSOn would look like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JSON" data-lang="JSON"><span class="p">{</span>
-  <span class="err">microservices:</span> <span class="err">[</span>
-    <span class="err">{</span>
-      <span class="err">app:</span> <span class="nt">&#34;user-authentication&#34;</span>
-      <span class="err">port</span><span class="p">:</span> <span class="mi">8000</span>
-      <span class="err">version</span><span class="p">:</span> <span class="s2">&#34;1.0&#34;</span>
-    <span class="p">}</span>
-  <span class="err">]</span>
-<span class="err">}</span>
-</code></pre></div><p>Note that here, we are using curly braces (<code>{}</code>) to define data structure.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JSON" data-lang="JSON"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">microservices:</span> <span class="err">[</span>
+</span></span><span class="line"><span class="cl">    <span class="err">{</span>
+</span></span><span class="line"><span class="cl">      <span class="err">app:</span> <span class="nt">&#34;user-authentication&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="err">port</span><span class="p">:</span> <span class="mi">8000</span>
+</span></span><span class="line"><span class="cl">      <span class="err">version</span><span class="p">:</span> <span class="s2">&#34;1.0&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="err">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span></code></pre></div><p>Note that here, we are using curly braces (<code>{}</code>) to define data structure.</p>
 <p><strong>NOTE: YAML is a superset of JSON i.e any valid JSON file is also a valid YAML file.</strong></p>
 <br>
 <h1 id="yaml-syntax">YAML Syntax <a class="heading-anchor" href="#yaml-syntax" aria-label="Anchor">#</a></h1>
 <p>YAML consists of a number of components such as key-value pairs, objects, lists etc. which helps us structure the data as needed.</p>
 <p>Let&rsquo;s go through them one by one:</p>
 <h2 id="key-value-pairs">Key-value pairs <a class="heading-anchor" href="#key-value-pairs" aria-label="Anchor">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
-</span><span class="w"></span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
-</span><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>In the above example <code>app: user-authentication</code> or <code>port: 8000</code> are called key-value pairs.</li>
 <li><strong>Note</strong> that <code>user-authentication</code> in the above example is a String, we don&rsquo;t need to to include Strings in <code>&quot;</code> unless we&rsquo;re using special characters such as a newline in which case we&rsquo;ll have to write this key-value pair as <code>app: &quot;user-authentication \n&quot;</code></li>
 </ul>
 <hr>
 <h2 id="comments">Comments <a class="heading-anchor" href="#comments" aria-label="Anchor">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="c"># This is a comment</span><span class="w">
-</span><span class="w"></span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
-</span><span class="w"></span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
-</span><span class="w"></span><span class="c"># This is an another comment</span><span class="w">
-</span><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="c"># This is a comment</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># This is an another comment</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>We can write comments in YAML using <code>#</code></li>
 <li>Adding comments is always considered a good practice to make the config more easily readable and human understandable.</li>
 </ul>
 <hr>
 <h2 id="objects">Objects <a class="heading-anchor" href="#objects" aria-label="Anchor">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">microservice</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
-</span><span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
-</span><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">microservice</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>We can group multiple key-value pairs inside of an object.</li>
 <li>In the above example we have the object <code>microservice</code></li>
 </ul>
 <p><strong>NOTE:<br>Always take care of the spaces and identation while writing YAML. There are many code editor extensions and websites which can help with YAML validation.</strong></p>
 <hr>
 <h2 id="lists">Lists <a class="heading-anchor" href="#lists" aria-label="Anchor">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">microservice</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-data</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">2.0</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-name</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">7000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;1.0&#34;</span><span class="p">,</span><span class="w"> </span><span class="m">2.0</span><span class="p">,</span><span class="w"> </span><span class="m">3.0</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="p">]</span><span class="w">    
-</span><span class="w">    
-</span><span class="w"></span><span class="nt">microservices</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">user-authentication</span><span class="w">
-</span><span class="w">  </span>- <span class="l">user-data</span><span class="w">
-</span><span class="w">  </span>- <span class="l">user-name</span><span class="w">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">microservice</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">2.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">7000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;1.0&#34;</span><span class="p">,</span><span class="w"> </span><span class="m">2.0</span><span class="p">,</span><span class="w"> </span><span class="m">3.0</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="p">]</span><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">microservices</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">user-data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">user-name</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>As shown above, we can create lists using <code>-</code></li>
 <li>Lists helps us organize data when we have multiple key-value pairs under one object or multiple values under one key.</li>
 <li>We can also create nested lists as shown in the example below:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">microservice</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-data</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w">                </span><span class="c"># nested list</span><span class="w">
-</span><span class="w">      </span>- <span class="m">1.0</span><span class="w">
-</span><span class="w">      </span>- <span class="m">2.0</span><span class="w">
-</span><span class="w">      </span>- <span class="m">3.0</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-name</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">7000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.8</span><span class="w">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">microservice</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w">                </span><span class="c"># nested list</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">1.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">2.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">3.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">7000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.8</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>Lists can also be created using this syntax:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">microservice</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="m">1.7</span><span class="p">,</span><span class="w"> </span><span class="m">1.8</span><span class="p">,</span><span class="w"> </span><span class="m">1.9</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;version&#34;</span><span class="p">]</span><span class="w">     </span><span class="c"># another syntax for lists</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-data</span><span class="w">
-</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9000</span><span class="w">
-</span><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">2.0</span><span class="w">
-</span></code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">microservice</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="m">1.7</span><span class="p">,</span><span class="w"> </span><span class="m">1.8</span><span class="p">,</span><span class="w"> </span><span class="m">1.9</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;version&#34;</span><span class="p">]</span><span class="w">     </span><span class="c"># another syntax for lists</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">2.0</span><span class="w">
+</span></span></span></code></pre></div><hr>
 <h2 id="booleans">Booleans <a class="heading-anchor" href="#booleans" aria-label="Anchor">#</a></h2>
 <p>YAML accepts <code>true/false</code>, <code>yes/no</code> and <code>on/off</code> as boolean data.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">microservice</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
-</span><span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
-</span><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
-</span><span class="w">  </span><span class="nt">deployed1</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># boolean true/false</span><span class="w">
-</span><span class="w">  </span><span class="nt">deployed2</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">  </span><span class="c"># boolean yes/no</span><span class="w">
-</span><span class="w">  </span><span class="nt">deployed3</span><span class="p">:</span><span class="w"> </span><span class="kc">on</span><span class="w">   </span><span class="c"># boolean on/off</span><span class="w">
-</span></code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">microservice</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">user-authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deployed1</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># boolean true/false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deployed2</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">  </span><span class="c"># boolean yes/no</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deployed3</span><span class="p">:</span><span class="w"> </span><span class="kc">on</span><span class="w">   </span><span class="c"># boolean on/off</span><span class="w">
+</span></span></span></code></pre></div><hr>
 <h2 id="multi-line-strings">Multi-line Strings <a class="heading-anchor" href="#multi-line-strings" aria-label="Anchor">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">multilineString</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
-</span><span class="sd">  this is a multiline string
-</span><span class="sd">  and this is the next line
-</span><span class="sd">  next line
-</span><span class="sd">  etc
-</span><span class="sd">  </span><span class="w">  
-</span><span class="w"></span><span class="nt">singlelineString</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
-</span><span class="sd">  this is a single line string,
-</span><span class="sd">  All three lines
-</span><span class="sd">  should be in the same line.</span><span class="w">  
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">multilineString</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  this is a multiline string
+</span></span></span><span class="line"><span class="cl"><span class="sd">  and this is the next line
+</span></span></span><span class="line"><span class="cl"><span class="sd">  next line
+</span></span></span><span class="line"><span class="cl"><span class="sd">  etc
+</span></span></span><span class="line"><span class="cl"><span class="sd">  </span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">singlelineString</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  this is a single line string,
+</span></span></span><span class="line"><span class="cl"><span class="sd">  All three lines
+</span></span></span><span class="line"><span class="cl"><span class="sd">  should be in the same line.</span><span class="w">  
+</span></span></span></code></pre></div><ul>
 <li>As shown in above example, We can use <code>|</code> to display each line of string data type as a newline</li>
 <li>Similarly, we can use <code>&gt;</code> if we want a single line string but don;t want to write it as a single line in our config file to make it more human readable.</li>
 </ul>
@@ -402,12 +411,12 @@
 <h2 id="some-things-to-note">Some things to note <a class="heading-anchor" href="#some-things-to-note" aria-label="Anchor">#</a></h2>
 <h3 id="accessing-environment-variables">Accessing Environment Variables: <a class="heading-anchor" href="#accessing-environment-variables" aria-label="Anchor">#</a></h3>
 <p>We can access environment variable in YAML using <code>$&lt;env varibale&gt;</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">command</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">/bin/sh</span><span class="w">
-</span><span class="w">  </span>- -<span class="l">ec</span><span class="w">
-</span><span class="w">  </span>- <span class="p">&gt;-</span><span class="sd">
-</span><span class="sd">  </span><span class="w">  </span><span class="l">mysql  -h 127.0.0.1 -u root -p$MYSQL_ROOT_PASSWORD -e &#39;SELECT 1&#39;</span><span class="w">
-</span></code></pre></div><p>In the above example, we are using the env variable <code>MYSQL_ROOT_PASSWORD</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">command</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">/bin/sh</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- -<span class="l">ec</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="p">&gt;-</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  </span><span class="w">  </span><span class="l">mysql  -h 127.0.0.1 -u root -p$MYSQL_ROOT_PASSWORD -e &#39;SELECT 1&#39;</span><span class="w">
+</span></span></span></code></pre></div><p>In the above example, we are using the env variable <code>MYSQL_ROOT_PASSWORD</code></p>
 <h3 id="placeholders">Placeholders: <a class="heading-anchor" href="#placeholders" aria-label="Anchor">#</a></h3>
 <ul>
 <li>We can use placeholders in YAML using double curly braces <code>{{value}}</code></li>
@@ -418,18 +427,18 @@
 <li>We can separate different YAML configs using <code>---</code></li>
 <li>This comes very handy in <a href="https://kubernetes.io/">Kubernetes</a> where we have multiple components in one service and we want to group them in single YAML file.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
-</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">configMap</span><span class="w">
-</span><span class="w"></span><span class="l">metadata</span><span class="w">
-</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">config-file</span><span class="w">
-</span><span class="w">  
-</span><span class="w"></span><span class="nn">---</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
-</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">configMap</span><span class="w">
-</span><span class="w"></span><span class="l">metadata</span><span class="w">
-</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">config-file</span><span class="w">
-</span></code></pre></div><p><strong>Note that we can write Kubernetes configuration files in both YAML and JSON format but YAML is more commonly used as it is cleaner and more readable</strong></p>
+<pre tabindex="0"><code>apiVersion: v1
+kind: configMap
+metadata
+  name: config-file
+  
+---
+
+apiVersion: v1
+kind: configMap
+metadata
+  name: config-file
+</code></pre><p><strong>Note that we can write Kubernetes configuration files in both YAML and JSON format but YAML is more commonly used as it is cleaner and more readable</strong></p>
 <br>
 <h1 id="thank-you-so-much-for-reading-">Thank you so much for reading 💖 <a class="heading-anchor" href="#thank-you-so-much-for-reading-" aria-label="Anchor">#</a></h1>
 <p>Hope you liked this blog on YAML. If you find any mistakes or inaccuracies, please inform me on social or by <a href="https://github.com/anubha-v-ardhan/anubha-v-ardhan.github.io/issues/new">filing an issue</a>.
